@@ -73,15 +73,14 @@ const AutoPlay = () => {
             <Loader/>
         </div> 
              : 
-         <Slider {...settings}>
+         <Slider {...settings} className="slider">
           {news.map(newsItem => {
                return(
                    <a arget="_blank" rel="noopener noreferrer" href={newsItem.url} className="slideTag">
                     <div class="slide">
                         <img src={newsItem.urlToImage ? newsItem.urlToImage : EmptyImage} alt="Avatar"/>
                         <div class="slide-container">
-                            <h4><b>{newsItem.title}</b></h4> 
-                            <p>{newsItem.content}</p> 
+                            <h5><b>{newsItem.title}</b></h5>  
                         </div>
                     </div>
                    </a>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&display=swap');
 
 .header{
     display: grid;
@@ -296,11 +297,16 @@ textarea {
     min-height: 30vh;
     padding: 4rem;
     margin: auto;
+    overflow: hidden;
+}
+.main-slide h2{
+    font-family: 'Anton', sans-serif;
 }
 .slide {
   transition: 0.3s;
   width: 99%;
-  /* height: 400px; */
+  border-radius: 10px;
+  font-family: 'Azeret Mono', monospace;
 }
 .slide img{
     width: 100%;
@@ -311,6 +317,9 @@ textarea {
 }
 .slide-container {
   padding: 2px 16px;
+}
+.slider{
+    padding: 1rem;
 }
 .newsLoader{
     text-align: center;
