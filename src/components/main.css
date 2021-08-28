@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+.header{
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    min-height: 10vh;
+    position: relative;
+}
+.logo{
+    text-decoration: none;
+    font-size: 3rem;
+    min-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Rampart One', cursive;
+    color: rgb(238, 37, 70);
+}
+.logo:hover{
+    transform: skewX(2deg);
+    transition: 0.2s ease;
+}
+.nav, .socials, .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.nav li{
+    list-style: none;
+}
+.nav li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.nav li a::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px red;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.nav li a:hover::after{
+    transform: scaleX(1);
+}
+.nav-dropdown li a::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px red;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.nav-dropdown li a:hover::after{
+    transform: scaleX(1);
+}
+.btn{
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn:hover{
+    background-color: red;
+    color: #ffffff;
+    transition: 0.4s ease all;
+}
+.socials{
+    justify-content: space-evenly;
+}
+.social{
+    cursor: pointer;
+}
+.social:hover{
+    color: brown;
+    transition: 0.4s all;
+}
+.toggle{
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 1.5rem 1rem;
+   display: none;
+}
+.nav-dropdown{
+    display: none;
+}
+
+.banner{
+    background-image: url('law.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    text-align:center;
+    color:#ffffff;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:40vh;
+    overflow:hidden;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+}
+.banner div{
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.div1{
+    animation: showup 7s infinite;
+}
+.div2{
+    width:0;
+    animation: reveal 7s infinite;
+}
+.div2 span{
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:555px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:555px;}
+}
+
+.best-practices{
+    text-align: center;
+    min-height: 50vh;
+    background: #03071e;
+    color: white;
+    padding: 1rem;
+}
+.best{
+    font-family: 'Anton', sans-serif;
+}
+.practices{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Anton', sans-serif;
+}
+.business-corporate{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.business-corporate div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.business-corporate div h2{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.business-corporate p{
+    text-align: justify;
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    letter-spacing: 2px;
+}
+
+.card-main{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.card-main h1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+.card-list{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: auto;
+    overflow: auto;
+}
+.card{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.card:hover{
+    color: rgb(82, 25, 25);
+    transition: 0.4s ease;
+    transform: scale(1.1);
+}
+
+.form{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: none;
+    transition: 0.5s ease;
+}
+.formClosed{
+    text-align: end;
+    cursor: pointer;
+}
+.formClosed:hover{
+    color: red;
+    transition: 0.4s ease;
+}
+.form.activeForm{
+    display: initial;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.slideTag{
+    text-decoration: none;
+    color: black;
+}
+.main-slide{
+    min-height: 30vh;
+    padding: 4rem;
+    margin: auto;
+}
+.slide {
+  transition: 0.3s;
+  width: 99%;
+  /* height: 400px; */
+}
+.slide img{
+    width: 100%;
+    height: 300px;
+}
+.slide:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.slide-container {
+  padding: 2px 16px;
+}
+.newsLoader{
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .practices{
+        width: 100%;
+        overflow: auto;
+    }
+    .nav, .btn, .socials{
+        display: none;
+    }
+    .toggle{
+        display: initial;
+    }
+    .header{
+        position: relative;
+    }
+    .nav-dropdown{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 100;
+        background: #ffffff;
+        top: 99%;
+        left: -100%;
+        transition: 0.4s all ease;
+        display: initial;
+    }
+    .nav-dropdown.active{
+        left: 0;
+        transition: 0.4s all ease;
+    }
+    .nav-dropdown ul{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem 3rem;
+    }
+    .nav-dropdown ul li{
+        list-style: none;
+    }
+    .nav-dropdown ul li a{
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: black;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .btn-dropdown{
+        width: 90%;
+        padding: 10px 15px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.3rem;
+    }
+    .btn-dropdown:hover{
+        background-color: red;
+        color: #ffffff;
+        transition: 0.4s ease all;
+    }
+    .main-slide{
+        padding: 1rem;
+    }
+    .slide {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .business-corporate p{
+        font-size: .8rem;
+    }
+    .business-corporate{
+        padding: 0;
+    }
+    .div1 h1{
+        font-size: 1.8rem;
+    }
+    .div2 span{
+        font-size: 1rem;
+    }
+    @keyframes reveal {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width:355px;}
+        80% {opacity:1;}
+        100% {opacity:0;width:355px;}
+    }
+    .nav-dropdown ul li a{
+        font-size: 1.3rem;
+    }
+    .links{
+        font-size: 1rem;
+    }
+    .main-slide{
+        padding: 1rem;
+    }
+    .slide {
+        width: 100%;
+    }
+}
