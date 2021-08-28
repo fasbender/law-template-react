@@ -86,8 +86,19 @@
     cursor: pointer;
 }
 .social:hover{
-    color: brown;
     transition: 0.4s all;
+}
+.fb:hover{
+    color: #3b5998;
+}
+.ig:hover{
+    color: #3f729b;
+}
+.li:hover{
+    color: #0072b1;
+}
+.tw:hover{
+    color: #1DA1F2;
 }
 .toggle{
    position: absolute;
@@ -244,14 +255,17 @@
 }
 .formClosed{
     text-align: end;
-    cursor: pointer;
-}
-.formClosed:hover{
-    color: red;
-    transition: 0.4s ease;
 }
 .form.activeForm{
     display: initial;
+}
+.formTimes{
+    cursor: pointer;
+}
+.formTimes:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: 0.2s ease;
 }
 input[type=text], select {
   width: 100%;
@@ -308,12 +322,12 @@ textarea {
   border-radius: 10px;
   font-family: 'Azeret Mono', monospace;
 }
+.slide:hover{
+    color: rgb(82, 82, 185);
+}
 .slide img{
     width: 100%;
     height: 300px;
-}
-.slide:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .slide-container {
   padding: 2px 16px;

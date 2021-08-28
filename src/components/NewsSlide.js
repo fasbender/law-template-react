@@ -53,10 +53,15 @@ const AutoPlay = () => {
     const newsApi = async() => {
     try {
       setIsLoading(true)
-      const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&category=Technology`)
+      const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&category=health`)
       setNews(response.data.articles)
     } catch (error) {
-      console.log(error)
+      return (
+        <div>
+          <h1>Unable to load News</h1>
+        </div>
+      )
+
     }
     setIsLoading(false)
   }
@@ -76,11 +81,11 @@ const AutoPlay = () => {
          <Slider {...settings} className="slider">
           {news.map(newsItem => {
                return(
-                   <a arget="_blank" rel="noopener noreferrer" href={newsItem.url} className="slideTag">
+                   <a target="_blank" rel="noopener noreferrer" href={newsItem.url} className="slideTag">
                     <div class="slide">
                         <img src={newsItem.urlToImage ? newsItem.urlToImage : EmptyImage} alt="Avatar"/>
                         <div class="slide-container">
-                            <h5><b>{newsItem.title}</b></h5>  
+                            <h5 style={{fontWeight: 'bolder'}}><b>{newsItem.title}</b></h5>  
                         </div>
                     </div>
                    </a>

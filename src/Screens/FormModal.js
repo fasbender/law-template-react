@@ -14,8 +14,8 @@ const FormModal = ({showModal, setShowModal}) => {
     return (
         <>
         <div className={`${showModal ? 'form activeForm' : 'form'}`}>
-            <div className="formClosed" onClick={() => setShowModal(false)}>
-                <FontAwesomeIcon icon={faTimes}/>
+            <div className="formClosed">
+                <FontAwesomeIcon icon={faTimes} onClick={() => setShowModal(false)} className="formTimes"/>
             </div>
             <Form/>
         </div>
