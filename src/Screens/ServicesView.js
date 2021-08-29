@@ -5,7 +5,6 @@ import '../components/main.css'
 const ServicesView = () => {
     return (
         <div className="card-main">
-            <h1>Services</h1>
             <div className="card-list">
                 <Services/>
             </div>

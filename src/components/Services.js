@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComments, faPhone, faTable, faSearch } from '@fortawesome/free-solid-svg-icons'
 import FormModal from '../Screens/FormModal'
 import './main.css'
 
@@ -13,20 +11,13 @@ const Services = () => {
     return (
         <>
         <div className="card">
-            <FontAwesomeIcon icon={faComments} size="3x"/>
-            <h1>Chat</h1>
-        </div>
-        <div className="card">
-            <FontAwesomeIcon icon={faPhone} size="3x"/>
-            <h1>Contact</h1>
+            <img src={process.env.PUBLIC_URL + '/images/contact.jpg'} alt="contact"/>
         </div>
         <div className="card" onClick={openModel}>
-            <FontAwesomeIcon icon={faTable} size="3x"/>
-            <h1>Report</h1>
+            <img src={process.env.PUBLIC_URL + '/images/investigate.jpg'} alt="investigation"/>
         </div>
         <div className="card">
-            <FontAwesomeIcon icon={faSearch} size="3x"/>
-            <h1>Investigation</h1>
+            <img src={process.env.PUBLIC_URL + '/images/report.jpg'} alt="report" onClick={openModel}/>
         </div>
         <FormModal showModal={showModal} setShowModal={setShowModal}/>
         </>

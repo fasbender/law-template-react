@@ -17,16 +17,16 @@ const Navbar = () => {
 
     return (
         <header className="header" id="navbar">
-            <a href="" className="logo" onClick={() => setToggle(false)}>RedDot</a>
 
             <nav className="nav">
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="#fieldofwork">AboutUS</a></li>
+                    <li><a href="">Services</a></li>
                     <li><a href="">Blog</a></li>
-                    <li><a href="">ContactUS</a></li>
                 </ul>
             </nav>
+            <a href="" className="logo" onClick={() => setToggle(false)}><img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/></a>
             <button className="btn">Let's Connect</button>
             <div className="socials">
                 <FontAwesomeIcon icon={faFacebookF} size="2x" className="social fb"/>

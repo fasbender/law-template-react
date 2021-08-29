@@ -3,25 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 .header{
     display: grid;
-    grid-template-columns: 20% 40% 20% 20%;
+    grid-template-columns: 40% 20% 20% 20%;
     min-height: 10vh;
     position: relative;
 }
 .logo{
     text-decoration: none;
-    font-size: 3rem;
     min-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Rampart One', cursive;
-    color: rgb(238, 37, 70);
 }
-.logo:hover{
-    transform: skewX(2deg);
-    transition: 0.2s ease;
+.logo img{
+    width: 70px;
 }
 .nav, .socials, .logo{
     display: flex;
@@ -40,7 +37,7 @@
 .nav li a{
     text-decoration: none;
     font-size: 1.3rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     color: black;
 }
@@ -209,7 +206,7 @@
     color: #e5e5e5;
     letter-spacing: 2px;
 }
-
+/* ///////////////////////// Services /////////////////////////// */
 .card-main{
     max-width: 960px;
     margin-left: auto;
@@ -221,26 +218,25 @@
     font-family: 'Anton', sans-serif;
 }
 .card-list{
+    display: flex;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
 }
 .card{
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
 }
+.card img{
+    width: 150px;
+}
 .card:hover{
-    color: rgb(82, 25, 25);
     transition: 0.4s ease;
     transform: scale(1.1);
 }
-
+/* ///////////////////////// Services /////////////////////////// */
+/* ///////////////////////// Form /////////////////////////// */
 .form{
     position: absolute;
     width: 90%;
@@ -301,7 +297,8 @@ textarea {
   font-size: 16px;
   resize: none;
 }
-
+/* ///////////////////////// Form /////////////////////////// */
+/* ///////////////////////// Slider /////////////////////////// */
 .slideTag{
     text-decoration: none;
     color: black;
@@ -348,8 +345,11 @@ textarea {
     background: gray;
     border-radius: 100px;
 }
-
+/* ///////////////////////// Slider /////////////////////////// */
 @media screen and (max-width: 1024px) {
+    .logo{
+        grid-column: 2/3;
+    }
     .practices{
         min-width: 0;
         overflow: hidden;
@@ -441,9 +441,7 @@ textarea {
         font-size: 1rem;
     }
     .card-list{
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: 1fr;
-        /* overflow: auto; */
+        flex-direction: column;
     }
     @keyframes reveal {
         0% {opacity:0;width:0px;}
@@ -472,5 +470,9 @@ textarea {
     }
     .slick-next {
         right: 5% !important;
+    }
+    .form{
+        width: 100%;
+        height: 100%;
     }
 }
