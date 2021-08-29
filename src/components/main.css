@@ -246,7 +246,8 @@
     background-color: #f2f2f2;
     padding: 20px;
     display: none;
-    transition: 0.5s ease;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 .formClosed{
     text-align: end;
@@ -274,7 +275,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #ec5656;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -284,7 +285,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #aa4d4d;
 }
 textarea {
   width: 100%;
@@ -310,13 +311,14 @@ textarea {
     overflow: hidden;
 }
 .main-slide h2{
-    font-family: 'Anton', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
 }
 .slide {
   transition: 0.3s;
   width: 99%;
   border-radius: 10px;
-  font-family: 'Azeret Mono', monospace;
+  font-family: 'Raleway', sans-serif;
 }
 .slide:hover{
     color: rgb(82, 82, 185);

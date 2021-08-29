@@ -13,7 +13,7 @@ const Services = () => {
         <div className="card">
             <img src={process.env.PUBLIC_URL + '/images/contact.jpg'} alt="contact"/>
         </div>
-        <div className="card" onClick={openModel}>
+        <div className="card">
             <img src={process.env.PUBLIC_URL + '/images/investigate.jpg'} alt="investigation"/>
         </div>
         <div className="card">
