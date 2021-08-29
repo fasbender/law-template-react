@@ -226,7 +226,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin: auto;
-    overflow: auto;
 }
 .card{
     padding: 2rem;
@@ -338,11 +337,22 @@ textarea {
 .newsLoader{
     text-align: center;
 }
+.slick-prev {
+  left: 3% !important;
+}
+.slick-next {
+  right: 3% !important;
+}
+.slick-next, .slick-prev{
+    z-index: 1;
+    background: gray;
+    border-radius: 100px;
+}
 
 @media screen and (max-width: 1024px) {
     .practices{
-        width: 100%;
-        overflow: auto;
+        min-width: 0;
+        overflow: hidden;
     }
     .nav, .btn, .socials{
         display: none;
@@ -414,8 +424,12 @@ textarea {
     }
 }
 @media screen and (max-width: 600px) {
+    .practices{
+        width: 100%;
+        overflow: auto;
+    }
     .business-corporate p{
-        font-size: .8rem;
+        font-size: .7rem;
     }
     .business-corporate{
         padding: 0;
@@ -425,6 +439,11 @@ textarea {
     }
     .div2 span{
         font-size: 1rem;
+    }
+    .card-list{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 1fr;
+        /* overflow: auto; */
     }
     @keyframes reveal {
         0% {opacity:0;width:0px;}
@@ -444,5 +463,14 @@ textarea {
     }
     .slide {
         width: 100%;
+    }
+    .slider{
+        padding: 0;
+    }
+    .slick-prev {
+        left: 5% !important;
+    }
+    .slick-next {
+        right: 5% !important;
     }
 }

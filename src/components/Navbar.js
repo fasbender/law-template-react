@@ -45,10 +45,10 @@ const Navbar = () => {
                     <li onClick={() => setToggle(false)}><a href="">ContactUS</a></li>
                     <button className="btn-dropdown">Let's Connect</button>
                     <div className="links">
-                        <FontAwesomeIcon icon={faFacebookF} className="social fb"/>
-                        <FontAwesomeIcon icon={faInstagram} className="social ig"/>
-                        <FontAwesomeIcon icon={faLinkedinIn} className="social li"/>
-                        <FontAwesomeIcon icon={faTwitter} className="social tw"/>
+                        <FontAwesomeIcon icon={faFacebookF} size="2x" className="social fb"/>
+                        <FontAwesomeIcon icon={faInstagram} size="2x" className="social ig"/>
+                        <FontAwesomeIcon icon={faLinkedinIn} size="2x" className="social li"/>
+                        <FontAwesomeIcon icon={faTwitter} size="2x" className="social tw"/>
                     </div>
                 </ul>
             </div>

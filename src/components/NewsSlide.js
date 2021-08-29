@@ -24,7 +24,7 @@ const AutoPlay = () => {
             slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
@@ -53,7 +53,7 @@ const AutoPlay = () => {
     const newsApi = async() => {
     try {
       setIsLoading(true)
-      const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&category=health`)
+      const response = await axios.get(`https://gnews.io/api/v4/search?q=law&token=${apiKey}`)
       setNews(response.data.articles)
     } catch (error) {
       return (
@@ -83,7 +83,7 @@ const AutoPlay = () => {
                return(
                    <a target="_blank" rel="noopener noreferrer" href={newsItem.url} className="slideTag">
                     <div class="slide">
-                        <img src={newsItem.urlToImage ? newsItem.urlToImage : EmptyImage} alt="Avatar"/>
+                        <img src={newsItem.image ? newsItem.image : EmptyImage} alt="Avatar"/>
                         <div class="slide-container">
                             <h5 style={{fontWeight: 'bolder'}}><b>{newsItem.title}</b></h5>  
                         </div>
