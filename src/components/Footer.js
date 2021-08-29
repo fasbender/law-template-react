@@ -1,9 +1,11 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import './contactform.css'
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer" id="foot">
             <div className="logo-div">
                 <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="cyberaid"/>
             </div>
@@ -29,6 +31,9 @@ const Footer = () => {
                 </form>
             </div>
             </div>
+            <a href="#navbar" className="goTop">
+                <FontAwesomeIcon icon={faArrowUp} size="2x"/>
+            </a>
         </div>
     )
 }

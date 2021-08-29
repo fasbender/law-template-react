@@ -76,6 +76,10 @@
     color: #ffffff;
     transition: 0.4s ease all;
 }
+.btn a{
+    text-decoration: none;
+    color: black;
+}
 .socials{
     justify-content: space-evenly;
 }
@@ -421,6 +425,10 @@ textarea {
         color: #ffffff;
         transition: 0.4s ease all;
     }
+    .btn-dropdown a{
+        text-decoration: none;
+        color: black;
+    }
     .main-slide{
         padding: 1rem;
     }
@@ -479,5 +487,8 @@ textarea {
     .form{
         width: 100%;
         height: 100%;
+    }
+    .logo img{
+        width: 60px;
     }
 }

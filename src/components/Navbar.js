@@ -27,7 +27,7 @@ const Navbar = () => {
                 </ul>
             </nav>
             <a href="" className="logo" onClick={() => setToggle(false)}><img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/></a>
-            <button className="btn">Let's Connect</button>
+            <button className="btn"><a href="#foot">Let's Connect</a></button>
             <div className="socials">
                 <FontAwesomeIcon icon={faFacebookF} size="2x" className="social fb"/>
                 <FontAwesomeIcon icon={faInstagram} size="2x" className="social ig"/>
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <li onClick={() => setToggle(false)}><a href="#fieldofwork">AboutUS</a></li>
                     <li onClick={() => setToggle(false)}><a href="">Blog</a></li>
                     <li onClick={() => setToggle(false)}><a href="">ContactUS</a></li>
-                    <button className="btn-dropdown">Let's Connect</button>
+                    <button className="btn-dropdown" href="#foot" onClick={() => setToggle(false)}><a href="#foot">Let's Connect</a></button>
                     <div className="links">
                         <FontAwesomeIcon icon={faFacebookF} size="2x" className="social fb"/>
                         <FontAwesomeIcon icon={faInstagram} size="2x" className="social ig"/>
