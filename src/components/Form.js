@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Loader from 'react-loader-spinner'
-
+import { nanoid } from 'nanoid'
 const Form = () => {
 
     const [data, setData] = useState({
@@ -29,7 +29,7 @@ const Form = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify([[fullname, number, crime, report, new Date().toLocaleString()]])
+                body: JSON.stringify([[nanoid(), fullname, number, crime, report, new Date().toLocaleString()]])
             })
             await response.json()
             setData({...data, fullname:'', number:'', crime:'', report:''})
@@ -42,16 +42,16 @@ const Form = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <label for="fname">Full Name</label>
+                <label htmlFor="fname">Full Name</label>
                 <input type="text" id="fname" name="fullname" value={fullname} onChange={handleChange} placeholder="Your name.."/>
 
-                <label for="number">Phone Number</label>
+                <label htmlFor="number">Phone Number</label>
                 <input type="text" id="number" name="number" value={number} onChange={handleChange} placeholder="Your number.."/>
 
-                <label for="crime">Type of Crime</label>
+                <label htmlFor="crime">Type of Crime</label>
                 <input type="text" id="crime" name="crime" value={crime} onChange={handleChange} placeholder="Crime.."/>
 
-                <label for="report">Report</label>
+                <label htmlFor="report">Report</label>
                 <textarea placeholder="Describe the crime..." value={report} onChange={handleChange} name="report"/>
             
                 {loadData ? 
