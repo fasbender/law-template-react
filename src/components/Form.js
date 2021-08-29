@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Loader from 'react-loader-spinner'
 
 const Form = () => {
 
@@ -8,6 +9,7 @@ const Form = () => {
         crime: "",
         report: "",
     });
+    const [loadData, setLoadData] = useState(false);
 
     const { fullname, number, crime, report } = data
 
@@ -21,18 +23,20 @@ const Form = () => {
     const handleSubmit = async(e) =>{
         e.preventDefault();
         try {
+            setLoadData(true)
             const response = await fetch('https://v1.nocodeapi.com/reddot/google_sheets/hRDrZjFMqmgZXVZO?tabId=Sheet1', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify([[fullname, number, crime, report, new Date().toLocaleString]])
+                body: JSON.stringify([[fullname, number, crime, report, new Date().toLocaleString()]])
             })
             await response.json()
             setData({...data, fullname:'', number:'', crime:'', report:''})
         } catch (error) {
             console.log(error)
         }
+        setLoadData(false)
     }
 
     return (
@@ -50,7 +54,10 @@ const Form = () => {
                 <label for="report">Report</label>
                 <textarea placeholder="Describe the crime..." value={report} onChange={handleChange} name="report"/>
             
-                <input type="submit" value="Submit Report" />
+                {loadData ? 
+                <div style={{textAlign: 'center'}}><Loader type="Circles" color="#00BFFF" height={40} width={40}/></div> 
+                :
+                <input type="submit" value="Submit Report" disabled={fullname==="" || number==="" || crime==="" || report===""}/>}
             </form>
         </>
     )
