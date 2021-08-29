@@ -1,0 +1,48 @@
+.footer{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('hammer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.contact p{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+.logo-div img{
+    background: white;
+    opacity: 0.5;
+    border-radius: 20%;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container label{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+  border-radius: 5px;
+  background: transparent;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer{
+        flex-direction: column;
+    }
+}
