@@ -20,10 +20,10 @@ const Navbar = () => {
 
             <nav className="nav">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#fieldofwork">AboutUS</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </nav>
             <a href="" className="logo" onClick={() => setToggle(false)}><img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/></a>
@@ -39,10 +39,10 @@ const Navbar = () => {
             </div>
             <div className={`${toggle ? 'nav-dropdown active' : 'nav-dropdown'}`}>
                 <ul>
-                    <li onClick={() => setToggle(false)}><a href="">Home</a></li>
+                    <li onClick={() => setToggle(false)}><a href="#">Home</a></li>
                     <li onClick={() => setToggle(false)}><a href="#fieldofwork">AboutUS</a></li>
-                    <li onClick={() => setToggle(false)}><a href="">Blog</a></li>
-                    <li onClick={() => setToggle(false)}><a href="">ContactUS</a></li>
+                    <li onClick={() => setToggle(false)}><a href="#">Blog</a></li>
+                    <li onClick={() => setToggle(false)}><a href="#">ContactUS</a></li>
                     <button className="btn-dropdown" href="#foot" onClick={() => setToggle(false)}><a href="#foot">Let's Connect</a></button>
                     <div className="links">
                         <FontAwesomeIcon icon={faFacebookF} size="2x" className="social fb"/>

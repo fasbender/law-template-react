@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from '../components/Form'
+import Form2 from '../components/Form2'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../components/main.css'
@@ -16,8 +17,8 @@ const FormModal = ({showModal, setShowModal}) => {
         <div className={`${showModal ? 'form activeForm' : 'form'}`}>
             <div className="formClosed">
                 <FontAwesomeIcon icon={faTimes} onClick={() => setShowModal(false)} className="formTimes"/>
+                <Form2/>
             </div>
-            <Form/>
         </div>
         </>
     )
